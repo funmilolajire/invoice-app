@@ -1,0 +1,16 @@
+.avatarDiv{
+    padding: 2.4rem 0;
+    border-top: 1px solid #494E6E;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatarDiv>div {
+    position: relative;
+    z-index: 1;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}

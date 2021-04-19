@@ -1,0 +1,87 @@
+.container {
+    background: #FFFFFF;
+box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 2rem 3.2rem;
+}
+
+.statusDiv{
+    display: flex;
+    align-items: center;
+}
+
+.statusDiv>span {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.25px;
+    color: #858BB2;
+    padding-right: 1.6rem;
+}
+
+.status {
+    width: 10.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 1.7rem;
+    border-radius: 6px;
+}
+
+.status span {
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 50%;
+    margin-right: 0.8rem;
+}
+
+.status h3 {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.25px;
+}
+
+.buttonsDiv{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.buttonsDiv button{
+    border: none;
+    padding: 1.65rem 2.35rem;
+    border-radius: 2.4rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.25px;
+    cursor: pointer;
+}
+
+.editButton{
+    color:#7E88C3;
+    background-color: #F9FAFE;
+}
+
+.editButton:hover{
+    background-color: #DFE3FA;
+}
+
+.deleteButton{
+    color: #FFFFFF;
+    background-color: #EC5757;
+}
+
+.deleteButton:hover {
+    background-color: #FF9797;
+}
+
+.paidButton{
+    color: #FFFFFF;
+    background-color: #7C5DFA;
+}
+
+.paidButton:hover {
+    background-color: #9277FF;
+}

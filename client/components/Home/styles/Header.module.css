@@ -1,0 +1,66 @@
+.container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 6.67rem;
+    margin: 7.2rem 0 5.8rem;
+    width: 100%;
+}
+
+.titleDiv h1{
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+    letter-spacing: -0.1rem;
+
+}
+
+.titleDiv span{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.25px;
+}
+
+.lowerDiv{
+    display: flex;
+}
+
+.buttonDiv {
+    width: 15rem;
+    height: 4.8rem;
+    background: #7C5DFA;
+    display: flex;
+    align-items: center;
+    border-radius: 24px;
+    padding: 0 1.6rem 0 0.8rem;
+    cursor: pointer;
+}
+
+.buttonDiv:hover {
+    background-color: #9277FF;
+}
+
+.buttonDiv:hover button {
+    color: #9277FF;
+}
+
+.buttonDiv button {
+    width: 3.2rem;
+    height: 3.2rem;
+    color: #7C5DFA;
+    background-color: #fff;
+    border-radius: 50%;
+    border: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.buttonDiv h3 {
+    margin-left:1.6rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.25px;
+    color: #fff;
+}

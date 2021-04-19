@@ -1,0 +1,68 @@
+.container{
+    position: fixed;
+    z-index: 20;
+    top:0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    width: 100vw;
+    height: 100vh;
+    margin-left: -10.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container section {
+    background: #FFFFFF;
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+    border-radius: 8px;
+    padding: 4.8rem;
+    width: 48rem;
+}
+
+.container section h2 {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    letter-spacing: -0.5px;
+}
+
+.container section p {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.25px;
+    margin: 1.3rem 0 1.6rem;
+}
+
+.buttonsDiv {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: flex-end;
+}
+
+.buttonsDiv button{
+    padding: 1.65rem 2.35rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.25px;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+.cancelButton {
+    background: #F9FAFE;
+    color: #7E88C3;
+}
+
+.cancelButton:hover {
+    background: #DFE3FA;
+}
+
+.deleteButton {
+    background: #EC5757;
+    color: #FFFFFF;
+}
+
+.deleteButton:hover {
+    background: #FF9797;
+}

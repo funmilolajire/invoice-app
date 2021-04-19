@@ -1,0 +1,73 @@
+.container{
+    margin-top: 4.5rem;
+    background: #F9FAFE;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.topDiv {
+    padding: 3.2rem 3.2rem 4rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.topDiv>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3.2rem;
+}
+
+.topDiv span {
+    color: #7E88C3;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+
+div.topDiv span.title {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    letter-spacing: -0.229167px;
+    color: #7E88C3;
+    font-weight: 500;
+}
+
+.topDiv .item span,
+.topDiv .total span {
+    color: #0C0E16;
+}
+
+.topDiv .qty {
+    text-align: center;
+}
+
+.topDiv .price,
+.topDiv .total {
+    text-align: right;
+}
+
+.bottomDiv {
+    padding: 2.4rem 3.2rem;
+    background: #373B53;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottomDiv span{
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    letter-spacing: -0.229167px;
+    color: #FFFFFF;
+}
+
+.bottomDiv h3 {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    text-align: right;
+    letter-spacing: -0.5px;
+    color: #FFFFFF;
+}

@@ -1,0 +1,66 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.6rem 1.5rem 1.6rem 3.2rem;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+    border-radius: 8px;
+    color: #7E88C3;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.25px;
+    cursor: pointer;
+}
+
+.container:hover{
+    border: 1px solid #7C5DFA;
+    box-sizing: border-box;
+}
+
+.id{
+padding-right: 4.4rem;
+font-size: 1.2rem;
+line-height: 1.5rem;
+letter-spacing: -0.25px;
+}
+
+.dueDate{
+padding-right: 4.8rem;
+}
+
+.total{
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-align: right;
+    letter-spacing: -0.8px;
+    padding: 0 4rem 0 7rem;
+}
+
+.status {
+    width: 10.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 1.7rem;
+    border-radius: 6px;
+}
+
+.status span {
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 50%;
+    margin-right: 0.8rem;
+}
+
+.label{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.25px;
+}
+
+.icon{
+padding-left: 2rem;
+color: #7C5DFA;
+font-size: 2rem;
+}

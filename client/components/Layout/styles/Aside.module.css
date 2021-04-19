@@ -1,0 +1,33 @@
+.container {
+    position: relative;
+    width: 10.3rem;
+}
+
+.container>div{
+    height: 100vh;
+    width: 10.3rem;
+    background: #373B53;
+    border-radius: 0px 20px 20px 0px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lowerDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconSpan {
+    color: #7E88C3;
+    font-size: 2rem;
+    margin-bottom: 3.21rem;
+    cursor: pointer;
+}
+
+.iconSpan:hover{
+    color: #DFE3FA;
+}

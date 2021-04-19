@@ -1,0 +1,35 @@
+@import '~sanitize.css';
+@import '~sanitize.css/forms.css';
+@import '~sanitize.css/typography.css';
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
+
+html{
+  font-size: 10px;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: 700;
+  color: #0C0E16;
+  margin: 0;
+  }
+
+p,span {
+  font-weight: 500;
+  color: #888EB0;
+  }
+
+body {
+  font-family: 'Spartan', sans-serif;
+  font-size: 1.6rem;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(to bottom, #888EB0, #7C5DFA);
+}

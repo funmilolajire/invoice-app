@@ -1,0 +1,35 @@
+.container {
+    width: 100%;
+    margin-top: 6.4rem;
+    margin-bottom: 2.4rem;
+}
+
+.backDiv{
+    display: flex;
+    align-items: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    cursor: pointer;
+    margin-bottom: 3.2rem;
+}
+
+.backIcon{
+    color: #7C5DFA;
+    font-size: 2rem;
+    margin-right: 2.366rem;
+    }
+
+.backDiv:hover .backIcon {
+    color: #7E88C3;
+}
+
+.backLabel{
+    font-size: 1.2rem;
+    line-height: 1;
+    letter-spacing: -0.25px;
+}
+
+.backDiv:hover .backLabel {
+    color: #9277FF;
+}

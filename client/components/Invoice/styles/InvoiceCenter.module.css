@@ -1,0 +1,58 @@
+.container{
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 2.1rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.container span {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.25px;
+    color: #7E88C3;
+}
+
+.container h3 {
+    margin-top: 1.2rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: -0.3125px;
+}
+
+.leftBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:-webkit-max-content;
+    height:-moz-max-content;
+    height:max-content;
+}
+
+/* .leftBox .topBox {} */
+
+.leftBox .bottomBox {
+    margin-top: 2rem;
+}
+
+.centerBox {
+    margin-left: 10rem;
+}
+
+.centerBox address{
+    margin-top: 0.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.centerBox address span{
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    letter-spacing: -0.229167px;
+    font-style: normal;
+}
+
+.rightBox {
+    margin-left: 11rem;
+}

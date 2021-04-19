@@ -1,0 +1,38 @@
+.filter {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox {
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #DFE3FA;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+.filter:hover .checkbox {
+    border: 1px solid #7C5DFA;
+}
+
+.checkbox__checked {
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #7C5DFA;
+    box-sizing: border-box;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.label {
+    margin-left: 1.3rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.25px;
+    color: #1E2139;
+}
