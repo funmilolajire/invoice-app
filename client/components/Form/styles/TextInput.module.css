@@ -1,0 +1,24 @@
+.container{
+    margin-bottom: 2.4rem;
+    position: relative;
+    width: 100%;
+}
+
+.error{
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.208333px;
+    color: #EC5757;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.labelError {
+    color: #EC5757 !important;
+}
+
+.inputError {
+    border: 1px solid #EC5757 !important;
+}

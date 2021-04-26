@@ -15,7 +15,7 @@
     font-size: 1.2rem;
     line-height: 1.5rem;
     letter-spacing: -0.25px;
-    color: #7E88C3;
+    color: var(--main-tertiary-text-color);
 }
 
 .senderAddress {
@@ -26,5 +26,20 @@
     line-height: 1.8rem;
     text-align: right;
     letter-spacing: -0.229167px;
-    color: #7E88C3;
+    color: var(--main-tertiary-text-color);
+}
+
+@media all and (max-width:420px) {
+    .container {
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+    .id {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        letter-spacing: -0.25px;
+    }
+    .senderAddress{
+        text-align: left;
+    }
 }

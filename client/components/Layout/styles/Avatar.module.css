@@ -14,3 +14,25 @@
     height: 4rem;
     border-radius: 50%;
 }
+
+@media all and (max-width:1000px) {
+    .avatarDiv>div{
+        width: 3.2rem;
+        height:3.2rem;
+    }
+}
+
+@media all and (max-width: 950px) {
+    .avatarDiv{
+        padding: 0 3.6rem 0 3.2rem;
+        border-top: none;
+        border-left: 1px solid #494E6E;
+        height: 100%;
+    }
+}
+
+@media all and (max-width: 550px) {
+    .avatarDiv {
+        padding: 0 2.4rem;
+    }
+}

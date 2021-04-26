@@ -1,10 +1,9 @@
-import styles from './styles/NewInvoice.module.css';
+import { FC } from 'react';
+import Form from './Form';
 
-const NewInvoice = () => {
+const NewInvoice: FC = () => {
     return (
-        <section className={styles.container}>
-            <h2>New Invoice</h2>
-        </section>
+        <Form formType="create" />
     )
 }
 

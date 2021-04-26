@@ -28,3 +28,30 @@
     width: 4rem;
     height: 3.77rem;
 }
+
+@media all and (max-width:1000px){
+    .logoDiv {
+        height:8rem
+    }
+    .logoDiv::after{
+        height: 8rem;
+        top:4rem;
+    }
+    .logoDiv>div{
+        width: 3.1rem;
+        height: 2.9rem;
+    }
+}
+
+@media all and (max-width:950px){
+    .logoDiv, .logoDiv::after{
+        height: 100%;
+        width: 8rem;
+    }
+}
+
+@media all and (max-width:550px) {
+ .logoDiv, .logoDiv::after {
+     width: 7.2rem;
+ }
+}

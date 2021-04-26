@@ -34,3 +34,12 @@
 .container p span {
     font-weight: 700;
 }
+
+@media all and (max-width:550px) {
+ .container{
+    width: 21.7rem;
+ }
+    .mobileHidden {
+        display: none;
+    }
+}

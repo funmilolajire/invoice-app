@@ -1,7 +1,8 @@
+import { FC } from 'react';
 import Image from 'next/image';
 import styles from './styles/Logo.module.css';
 
-const Logo = () => {
+const Logo: FC = () => {
     return (
         <div className={styles.logoDiv}>
             <Image

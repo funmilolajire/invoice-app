@@ -6,14 +6,13 @@
     background: rgba(0,0,0,0.5);
     width: 100vw;
     height: 100vh;
-    margin-left: -10.3rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .container section {
-    background: #FFFFFF;
+    background: var(--box-bg-color);
     box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
     border-radius: 8px;
     padding: 4.8rem;
@@ -50,12 +49,12 @@
 }
 
 .cancelButton {
-    background: #F9FAFE;
     color: #7E88C3;
+    background-color: var(--button-edit-bg-color);
 }
 
 .cancelButton:hover {
-    background: #DFE3FA;
+    background-color: var(--button-edit-bg-color-hover);
 }
 
 .deleteButton {
@@ -65,4 +64,20 @@
 
 .deleteButton:hover {
     background: #FF9797;
+}
+
+@media all and (max-width:550px) {
+    .container{
+        padding: 0 2.4rem;
+    }
+    .container section {
+        padding: 3.2rem;
+    }
+    .container section h2 {
+        font-size: 2rem;
+        letter-spacing: -0.42px;
+    }
+    .container section p {
+        margin: 0.8rem 0 2.4rem;
+    }
 }

@@ -11,7 +11,6 @@
     font-size: 3.2rem;
     line-height: 3.6rem;
     letter-spacing: -0.1rem;
-
 }
 
 .titleDiv span{
@@ -57,10 +56,42 @@
     justify-content: center;
 }
 
-.buttonDiv h3 {
+.buttonDiv h3{
     margin-left:1.6rem;
     font-size: 1.2rem;
     line-height: 1.5rem;
     letter-spacing: -0.25px;
     color: #fff;
+}
+ .buttonDiv h3>span{
+     font-weight: bold;
+    color: #fff;
+    }
+@media all and (max-width: 950px) {
+    .container {
+        margin: 13.6rem 0 5.6rem;
+    }
+}
+
+@media all and (max-width: 550px) {
+    .container {
+        margin: 10.4rem 0 3.2rem;
+    }
+    .mobileHidden {
+        display: none;
+    }
+    .titleDiv h1 {
+        font-size: 2.0rem;
+        line-height: 2.2rem;
+        letter-spacing: -0.625px;
+    }
+    .buttonDiv{
+    width: 9rem;
+    height: 4.4rem;
+    padding: 0 0.6rem;
+    }
+
+    .buttonDiv h3{
+        margin-left: 0.8rem;
+    }
 }

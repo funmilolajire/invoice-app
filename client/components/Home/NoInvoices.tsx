@@ -1,7 +1,8 @@
+import { FC } from 'react';
 import Image from 'next/image';
 import styles from './styles/NoInvoices.module.css';
 
-const NoInvoices = () => {
+const NoInvoices: FC = () => {
     return (
         <section className={styles.container}>
             <picture className={styles.picture}>
@@ -15,7 +16,7 @@ const NoInvoices = () => {
             </picture>
             <div className={styles.textDiv}>
                 <h2>There is nothing here</h2>
-                <p>Create an invoice by clicking the <span>New Invoice</span> button and get started</p>
+                <p>Create an invoice by clicking the <span>New <span className={styles.mobileHidden}> Invoice</span></span> button and get started</p>
             </div>
         </section>
     )

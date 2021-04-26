@@ -11,7 +11,7 @@
     font-size: 1.2rem;
     line-height: 1.5rem;
     letter-spacing: -0.25px;
-    color: #7E88C3;
+    color: var(--main-tertiary-text-color);
 }
 
 .container h3 {
@@ -55,4 +55,47 @@
 
 .rightBox {
     margin-left: 11rem;
+}
+
+@media all and (max-width:690px) {
+    .centerBox {
+        margin-left: 5rem;
+    }
+    .rightBox{
+        margin-left: 6rem;
+    }
+}
+
+@media all and (max-width:590px) {
+    .centerBox {
+        margin-left: 3rem;
+    }
+
+    .rightBox {
+        margin-left: 4rem;
+    }
+}
+
+@media all and (max-width:520px) {
+    .container{
+        flex-wrap: wrap;
+    }
+    .rightBox {
+        margin-left: 2rem;
+    }
+}
+
+@media all and (max-width:500px) {
+    .container{
+        row-gap: 3.2rem;
+        margin-top: 3.1rem;
+        -moz-column-gap: 4.1rem;
+             column-gap: 4.1rem;
+    }
+    .rightBox{
+        margin-left: 0;
+    }
+    .centerBox {
+        margin-left: 0;
+    }
 }

@@ -1,11 +1,9 @@
-import styles from './styles/EditInvoice.module.css';
+import { FC } from 'react';
+import Form from './Form';
 
-const EditInvoice = () => {
-    const id = 'XM9141'
+const EditInvoice: FC<Invoice> = ({ invoice }) => {
     return (
-        <section className={styles.container}>
-            <h2>Edit #{id}</h2>
-        </section>
+        <Form formType="edit" invoice={invoice} />
     )
 }
 

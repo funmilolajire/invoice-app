@@ -1,0 +1,19 @@
+.container {
+    margin-bottom: 2.4rem;
+    position: relative;
+    width: 100%;
+}
+
+.customDatePickerDiv{
+     position: relative;
+     display: flex;
+     align-items: center;
+}
+
+.iconSpan {
+    color: #7E88C3;
+    font-size: 2rem;
+    position: absolute;
+    /* top: 0; */
+    right: 1.6rem;
+}

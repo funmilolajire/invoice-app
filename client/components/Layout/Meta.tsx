@@ -1,6 +1,12 @@
+import { FC } from 'react';
 import Head from 'next/head';
 
-const Meta = ({ title, keywords }) => {
+interface Props {
+    title: string;
+    keywords: string
+}
+
+const Meta: FC<Props> = ({ title, keywords }) => {
     return (
         <Head>
             <title>Invoice App | {title}</title>

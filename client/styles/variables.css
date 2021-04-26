@@ -1,0 +1,39 @@
+:root {
+    --main-bg-color: #f8f8fb;
+    --layout-aside-bg-color: #373b53;
+    --layout-aside-icon-color: #7e88c3;
+    --box-bg-color: #fff;
+    --main-bold-text-color: #0c0e16;
+    --main-primary-text-color: #888eb0;
+    --main-secondary-text-color: #858bb2;
+    --main-tertiary-text-color: #7e88c3;
+    --filterbox-bg-color: #fff;
+    --checkbox-bg-color: #dfe3fa;
+    --button-edit-bg-color: #f9fafe;
+    --button-edit-bg-color-hover: #dfe3fa;
+    --invoice-item-box-bg-color: #f9fafe;
+    --invoice-item-total-box-bg-color: #373b53;
+    --form-bg-color: #fff;
+    --form-input-focus-color: #9277ff;
+    --form-payment-selected: #7c5dfa;
+}
+
+.dark {
+    --main-bg-color: #141625;
+    --layout-aside-bg-color: #1e2139;
+    --layout-aside-icon-color: #858bb2;
+    --box-bg-color: #1e2139;
+    --main-bold-text-color: #fff;
+    --main-primary-text-color: #dfe3fa;
+    --main-secondary-text-color: #fff;
+    --main-tertiary-text-color: #dfe3fa;
+    --filterbox-bg-color: #252945;
+    --checkbox-bg-color: #1e2139;
+    --button-edit-bg-color: #252945;
+    --button-edit-bg-color-hover: #fff;
+    --invoice-item-box-bg-color: #252945;
+    --invoice-item-total-box-bg-color: #0c0e16;
+    --form-bg-color: #141625;
+    --form-input-focus-color: #7c5dfa;
+    --form-payment-selected: #9277ff;
+    }

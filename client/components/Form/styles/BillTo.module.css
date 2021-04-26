@@ -1,0 +1,24 @@
+.container{
+    margin-top: 2.4rem;
+}
+.container .trioColumns {
+    display: flex;
+    -moz-column-gap: 2.4rem;
+    column-gap: 2.4rem;
+}
+
+@media all and (max-width:550px) {
+    .container .trioColumns{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .container div:first-child {
+        grid-column: 1/2;
+    }
+    .container div:nth-child(2){
+        grid-column: 2/3;
+    }
+    .container div:last-child{
+        grid-column: 1/3;
+    }
+}

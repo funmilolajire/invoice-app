@@ -1,0 +1,161 @@
+.container{
+    margin-top: 2.4rem;
+}
+
+div.container h3{
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    letter-spacing: -0.375px;
+    color: #777F98;
+    margin-bottom: 1.6rem;
+    margin-top: 3.6rem;
+}
+
+.container .itemsDiv{
+    display: inline-grid;
+    grid-template-columns: 5fr 2fr 3fr 3fr 1fr;
+    grid-template-rows: auto auto;
+    align-items: flex-end;
+    grid-gap:1.6rem;
+    width: 100%;
+}
+
+.container .itemsDiv>label{
+    margin-bottom: 0rem;
+}
+
+.container .itemsDiv>div label{
+    display: none;
+}
+
+.container .itemsDiv>div>div {
+    margin-bottom: 0;
+}
+
+.container .itemsDiv>div>div>div{
+    display: none;
+}
+
+.container .quantity input{
+    padding: 1.65rem 0.5rem;
+    text-align: center;
+}
+
+.container .total input {
+    border: none;
+    padding: 1.65rem 0;
+}
+
+.container .total span{
+    padding: 1.65rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    letter-spacing: -0.25px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.container .name {
+    grid-column: 1/2;
+}
+
+.container .quantity {
+    grid-column: 2/3;
+}
+
+.price {
+    grid-column: 3/4;
+}
+
+.total {
+    grid-column: 4/5;
+    align-self: center;
+}
+
+.deleteIcon {
+    grid-column: 5/6;
+    align-self: center;
+}
+
+.deleteIcon span {
+    color: #888eb0;
+}
+
+.container .inputDiv{
+    grid-row: 2/3;
+}
+
+.container .iconSpan {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.container .iconSpan:hover {
+    color: #EC5757;
+}
+
+.container .addNewItem {
+     color: #7e88c3;
+     background-color: var(--button-edit-bg-color);
+     font-weight: bold;
+     font-size: 1.2rem;
+     line-height: 1.5rem;
+     text-align: center;
+     letter-spacing: -0.25px;
+     border-radius: 24px;
+     border: none;
+     padding: 1.65rem 0;
+     width: 100%;
+     cursor: pointer;
+     margin-top: 1.8rem;
+}
+
+.container .addNewItem:hover{
+     background-color: var(--button-edit-bg-color-hover);
+}
+
+@media all and (max-width:500px) {
+    .container .itemsDiv {
+        grid-template-columns: 2fr 3fr 3fr 1fr;
+        gap: 2.5rem;
+    }
+    .container .itemsDiv>label {
+        display: none;
+    }
+
+    .container .itemsDiv>div label {
+        display: block;
+    }
+
+    .container .name {
+        grid-column: 1/5;
+    }
+
+    .container .quantity {
+        grid-column: 1/2;
+    }
+
+    .price {
+        grid-column: 2/3;
+    }
+
+    .total {
+        grid-column: 3/4;
+        align-self: center;
+    }
+
+    .container .total label {
+        margin-top: -1.5rem;
+    margin-bottom: 2rem;
+    }
+    .deleteIcon {
+        grid-column: 4/5;
+        align-self: center;
+        margin-top: 2rem;
+    }
+
+    .container .addNewItem{
+        margin-top: 4.8rem;
+    }
+}

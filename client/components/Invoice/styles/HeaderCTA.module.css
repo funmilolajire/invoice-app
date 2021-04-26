@@ -1,5 +1,5 @@
 .container {
-    background: #FFFFFF;
+    background: var(--box-bg-color);
 box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
 border-radius: 8px;
 display: flex;
@@ -17,7 +17,7 @@ padding: 2rem 3.2rem;
     font-size: 1.2rem;
     line-height: 1.5rem;
     letter-spacing: -0.25px;
-    color: #858BB2;
+    color: var(--main-secondary-text-color);
     padding-right: 1.6rem;
 }
 
@@ -61,11 +61,11 @@ padding: 2rem 3.2rem;
 
 .editButton{
     color:#7E88C3;
-    background-color: #F9FAFE;
+    background-color: var(--button-edit-bg-color);
 }
 
 .editButton:hover{
-    background-color: #DFE3FA;
+    background-color: var(--button-edit-bg-color-hover);
 }
 
 .deleteButton{
@@ -84,4 +84,36 @@ padding: 2rem 3.2rem;
 
 .paidButton:hover {
     background-color: #9277FF;
+}
+@media all and (max-width:700px) {
+    .container {
+        padding: 2.4rem;
+    }
+}
+
+@media all and (max-width:600px) {
+    .statusDiv{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .buttonsDiv{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: var(--box-bg-color);
+        box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+        padding: 2.2rem 2.4rem;
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+@media all and (max-width:420px) {
+    .buttonsDiv{
+        justify-content: space-between;
+    }
+    .buttonsDiv button {
+    padding: 1.45rem 2rem;
+    }
 }

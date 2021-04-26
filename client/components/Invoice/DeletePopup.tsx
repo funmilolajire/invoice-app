@@ -1,17 +1,18 @@
+import { FC } from 'react';
 import styles from './styles/DeletePopup.module.css';
+import { useModalState } from '../../state/form.state';
 
-const DeletePopup = () => {
-    const open = false;
-    const id = 'XM9141'
+const DeletePopup: FC<{ id?: string }> = ({ id }) => {
+    const modalState = useModalState()
     return (
         <>
-            {open &&
+            {modalState.get() &&
                 <div className={styles.container}>
                     <section>
                         <h2>Confirm Deletion</h2>
                         <p>Are you sure you want to delete invoice #{id}? This action can not be undone.</p>
                         <div className={styles.buttonsDiv}>
-                            <button className={styles.cancelButton}>Cancel</button>
+                            <button className={styles.cancelButton} onClick={() => modalState.close()} >Cancel</button>
                             <button className={styles.deleteButton}>Delete</button>
                         </div>
                     </section>
