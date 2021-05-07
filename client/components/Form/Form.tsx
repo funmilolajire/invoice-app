@@ -8,7 +8,7 @@ import styles from './styles/Form.module.css';
 import { Formik, Form, FieldArray } from 'formik';
 import { initialValues } from '../../utils/formFields';
 import { validationSchema } from '../../utils/formValidation';
-import { usePaymentState, useIssueState } from '../../state/form.state';
+import { usePaymentState, useIssueState, useFormState } from '../../state/form.state';
 import dayjs from 'dayjs';
 import duration from 'dayjs/plugin/duration';
 import { getId } from '../../utils/getId';
@@ -16,6 +16,7 @@ import { useRouter } from 'next/router';
 dayjs.extend(duration)
 
 const InvoiceForm: FC<FormType> = ({ formType, invoice }) => {
+    const formState = useFormState()
     const paymentTerm = usePaymentState()
     const issueDate = useIssueState()
     const router = useRouter()
@@ -41,20 +42,22 @@ const InvoiceForm: FC<FormType> = ({ formType, invoice }) => {
                 }
             })
                 .then(() => {
-                    router.reload()
+                    router.replace(router.asPath)
+                    formState.close()
                 })
                 .catch(e => console.log(e))
         } else {
             await fetch(process.env.NEXT_PUBLIC_INVOICES_API_URL ? process.env.NEXT_PUBLIC_INVOICES_API_URL + `/${invoice?.id}` : '', {
                 method: 'PATCH',
-                body: JSON.stringify(values),
+                body: JSON.stringify({ ...values, status: "pending" }),
                 headers: {
                     "Content-Type": "application/json",
                     "Accept": "application/json"
                 }
             })
                 .then(() => {
-                    router.reload()
+                    router.replace(router.asPath)
+                    formState.close()
                 })
                 .catch(e => console.log(e))
         }

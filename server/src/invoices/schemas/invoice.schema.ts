@@ -3,7 +3,7 @@ import { Document } from 'mongoose';
 
 export type InvoiceDocument = Invoice & Document;
 
-@Schema({ optimisticConcurrency: true })
+@Schema({ optimisticConcurrency: true, timestamps: { createdAt: 'created_at' } })
 export class Invoice {
     @Prop()
     _id: string;

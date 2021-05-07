@@ -3,36 +3,15 @@ import Main from '../../../components/Invoice/Main';
 import EditInvoice from '../../../components/Form/EditInvoice';
 import DeletePopup from '../../../components/Invoice/DeletePopup';
 import { useRouter } from 'next/router';
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import { useFormState } from '../../../state/form.state';
-import { FC, useState, useEffect } from 'react';
+import { FC } from 'react';
 import dayjs from 'dayjs';
 
 const Invoice: FC<Invoice> = ({ invoice }) => {
     const formState = useFormState().get()
     const router = useRouter();
     const id = router.query.id;
-    // const [invoice, setInvoice] = useState<FormValues>(Object)
-    // const getInvoice = async () => {
-    //     setInvoice(Object)
-    //     const res = await fetch(process.env.NEXT_PUBLIC_INVOICES_API_URL ? process.env.NEXT_PUBLIC_INVOICES_API_URL + `/${id}` : '')
-    //     let currentInvoice: FormValues = await res.json();
-    //     currentInvoice.createdAt = dayjs(currentInvoice.createdAt).format('DD MMM YYYY')
-    //     currentInvoice.paymentDue = dayjs(currentInvoice.paymentDue).format('DD MMM YYYY')
-    //     currentInvoice.id = currentInvoice._id
-    //     setInvoice(currentInvoice)
-    // }
-
-    // useEffect(() => {
-    //     try {
-    //         getInvoice()
-    //         console.log(invoice)
-    //     }
-    //     catch (e) {
-    //         console.log(e)
-    //     }
-    // }, [invoice])
-
 
     return (
         <>
@@ -44,7 +23,7 @@ const Invoice: FC<Invoice> = ({ invoice }) => {
     )
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
     const id = context.params?.id
     const res = await fetch(process.env.INVOICES_API_URL ? process.env.INVOICES_API_URL + `/${id}` : '')
     const invoice = await res.json()
@@ -55,17 +34,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
         props: {
             invoice
         }
-    }
-}
-
-export const getStaticPaths: GetStaticPaths = async () => {
-    const res = await fetch(process.env.INVOICES_API_URL ? process.env.INVOICES_API_URL : '')
-    const invoices = await res.json()
-    const ids = invoices.map((invoice: FormValues) => invoice._id)
-    const paths = ids.map((id: string) => ({ params: { id: id } }))
-    return {
-        paths,
-        fallback: false
     }
 }
 
