@@ -1,5 +1,6 @@
 interface Status {
-    status: string
+    status: string,
+    id: string
 }
 
 interface Address {

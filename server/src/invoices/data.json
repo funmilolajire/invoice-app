@@ -1,6 +1,5 @@
-[
-  {
-    "id": "RT3080",
+[{
+    "_id": "RT3080",
     "createdAt": "2021-08-18",
     "paymentDue": "2021-08-19",
     "description": "Re-branding",
@@ -20,18 +19,16 @@
       "postCode": "NR24 5WQ",
       "country": "United Kingdom"
     },
-    "items": [
-      {
-        "name": "Brand Guidelines",
-        "quantity": 1,
-        "price": 1800.90,
-        "total": 1800.90
-      }
-    ],
+    "items": [{
+      "name": "Brand Guidelines",
+      "quantity": 1,
+      "price": 1800.90,
+      "total": 1800.90
+    }],
     "total": 1800.90
   },
   {
-    "id": "XM9141",
+    "_id": "XM9141",
     "createdAt": "2021-08-21",
     "paymentDue": "2021-09-20",
     "description": "Graphic Design",
@@ -51,8 +48,7 @@
       "postCode": "BD1 9PB",
       "country": "United Kingdom"
     },
-    "items": [
-      {
+    "items": [{
         "name": "Banner Design",
         "quantity": 1,
         "price": 156.00,
@@ -68,7 +64,7 @@
     "total": 556.00
   },
   {
-    "id": "RG0314",
+    "_id": "RG0314",
     "createdAt": "2021-09-24",
     "paymentDue": "2021-10-01",
     "description": "Website Redesign",
@@ -88,18 +84,16 @@
       "postCode": "IP19 3PF",
       "country": "United Kingdom"
     },
-    "items": [
-      {
-        "name": "Website Redesign",
-        "quantity": 1,
-        "price": 14002.33,
-        "total": 14002.33
-      }
-    ],
+    "items": [{
+      "name": "Website Redesign",
+      "quantity": 1,
+      "price": 14002.33,
+      "total": 14002.33
+    }],
     "total": 14002.33
   },
   {
-    "id": "RT2080",
+    "_id": "RT2080",
     "createdAt": "2021-10-11",
     "paymentDue": "2021-10-12",
     "description": "Logo Concept",
@@ -119,18 +113,16 @@
       "postCode": "CA20 2TG",
       "country": "United Kingdom"
     },
-    "items": [
-      {
-        "name": "Logo Sketches",
-        "quantity": 1,
-        "price": 102.04,
-        "total": 102.04
-      }
-    ],
+    "items": [{
+      "name": "Logo Sketches",
+      "quantity": 1,
+      "price": 102.04,
+      "total": 102.04
+    }],
     "total": 102.04
   },
   {
-    "id": "AA1449",
+    "_id": "AA1449",
     "createdAt": "2021-10-7",
     "paymentDue": "2021-10-14",
     "description": "Re-branding",
@@ -150,8 +142,7 @@
       "postCode": "CB5 6EG",
       "country": "United Kingdom"
     },
-    "items": [
-      {
+    "items": [{
         "name": "New Logo",
         "quantity": 1,
         "price": 1532.33,
@@ -167,7 +158,7 @@
     "total": 4032.33
   },
   {
-    "id": "TY9141",
+    "_id": "TY9141",
     "createdAt": "2021-10-01",
     "paymentDue": "2021-10-31",
     "description": "Landing Page Design",
@@ -187,18 +178,16 @@
       "postCode": "60457",
       "country": "United States of America"
     },
-    "items": [
-      {
-        "name": "Web Design",
-        "quantity": 1,
-        "price": 6155.91,
-        "total": 6155.91
-      }
-    ],
+    "items": [{
+      "name": "Web Design",
+      "quantity": 1,
+      "price": 6155.91,
+      "total": 6155.91
+    }],
     "total": 6155.91
   },
   {
-    "id": "FV2353",
+    "_id": "FV2353",
     "createdAt": "2021-11-05",
     "paymentDue": "2021-11-12",
     "description": "Logo Re-design",
@@ -218,14 +207,12 @@
       "postCode": "",
       "country": ""
     },
-    "items": [
-      {
-        "name": "Logo Re-design",
-        "quantity": 1,
-        "price": 3102.04,
-        "total": 3102.04
-      }
-    ],
+    "items": [{
+      "name": "Logo Re-design",
+      "quantity": 1,
+      "price": 3102.04,
+      "total": 3102.04
+    }],
     "total": 3102.04
   }
 ]

@@ -1,6 +1,6 @@
 import { accessIssueState, accessPaymentState } from '../state/form.state';
 export const initialValues = {
-    id: "",
+    _id: "",
     status: "Draft",
     senderAddress: {
         street: "",

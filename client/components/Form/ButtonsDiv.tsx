@@ -1,9 +1,10 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import styles from './styles/ButtonsDiv.module.css';
 import { useFormState } from '../../state/form.state';
 
 const ButtonsDiv: FC<FormType> = ({ formType }) => {
     const formState = useFormState()
+    const [loading, setLoading] = useState(false)
     const closeForm = () => {
         formState.close()
     }

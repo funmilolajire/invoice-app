@@ -82,9 +82,121 @@ padding: 2rem 3.2rem;
     background-color: #7C5DFA;
 }
 
-.paidButton:hover {
+.paidButton:disabled{
+    opacity: 0.7;
+}
+
+.paidButton:disabled:hover{
+    background-color: #7C5DFA;
+    cursor: not-allowed;
+}
+
+.paidButton:hover{
     background-color: #9277FF;
 }
+
+.ldsEllipsis {
+    display: inline-block;
+    position: relative;
+    width: 7rem;
+    height: 1.3rem;
+}
+
+.ldsEllipsis div {
+    position: absolute;
+    top: calc(1.5rem - 13px);
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);
+            animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.ldsEllipsis div:nth-child(1) {
+    left: 8px;
+    -webkit-animation: ldsEllipsis1 0.6s infinite;
+            animation: ldsEllipsis1 0.6s infinite;
+}
+
+.ldsEllipsis div:nth-child(2) {
+    left: 8px;
+    -webkit-animation: ldsEllipsis2 0.6s infinite;
+            animation: ldsEllipsis2 0.6s infinite;
+}
+
+.ldsEllipsis div:nth-child(3) {
+    left: 32px;
+    -webkit-animation: ldsEllipsis2 0.6s infinite;
+            animation: ldsEllipsis2 0.6s infinite;
+}
+
+.ldsEllipsis div:nth-child(4) {
+    left: 56px;
+    -webkit-animation: ldsEllipsis3 0.6s infinite;
+            animation: ldsEllipsis3 0.6s infinite;
+}
+
+@-webkit-keyframes ldsEllipsis1 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes ldsEllipsis1 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes ldsEllipsis3 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes ldsEllipsis3 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@-webkit-keyframes ldsEllipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
+@keyframes ldsEllipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
 @media all and (max-width:700px) {
     .container {
         padding: 2.4rem;

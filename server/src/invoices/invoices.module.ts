@@ -1,4 +1,12 @@
-import { Module } from '@nestjs/common';
+import { HttpModule, Module } from '@nestjs/common';
+import { InvoicesService } from './invoices.service';
+import { InvoicesController } from './invoices.controller';
+import { MongooseModule } from '@nestjs/mongoose';
+import { Invoice, InvoiceSchema } from './schemas/invoice.schema';
 
-@Module({})
-export class InvoicesModule {}
+@Module({
+  imports: [HttpModule, MongooseModule.forFeature([{ name: Invoice.name, schema: InvoiceSchema }])],
+  controllers: [InvoicesController],
+  providers: [InvoicesService]
+})
+export class InvoicesModule { }

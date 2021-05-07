@@ -1,6 +1,6 @@
 import * as Yup from 'yup';
 export const validationSchema = Yup.object().shape({
-    id: Yup.string(),
+    _id: Yup.string(),
     status: Yup.string(),
     senderAddress: Yup.object().shape({
         street: Yup.string().required('can\'t be empty'),

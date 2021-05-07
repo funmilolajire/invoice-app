@@ -37,6 +37,7 @@ interface ItemsListProps {
 
 interface FormValues {
     id?: string;
+    _id?: string;
     status: string,
     senderAddress: {
         street: string,
