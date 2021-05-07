@@ -31,34 +31,34 @@ const InvoiceForm: FC<FormType> = ({ formType, invoice }) => {
             values.items = values.items.map(item => ({ ...item, quantity: Number(item.quantity), price: Number(item.price), total: Number(item.price * item.quantity) }))
             values.total = (values.items.map((item) => item.total)).reduce((acc, b) => acc + b)
         }
-        // if (formType === "create") {
-        //     await fetch(process.env.NEXT_PUBLIC_INVOICES_API_URL ? process.env.NEXT_PUBLIC_INVOICES_API_URL : '', {
-        //         method: 'POST',
-        //         body: JSON.stringify(values),
-        //         headers: {
-        //             "Content-Type": "application/json",
-        //             "Accept": "application/json"
-        //         }
-        //     })
-        //         .then(() => {
-        //             router.reload()
-        //         })
-        //         .catch(e => console.log(e))
-        // } else {
-        //     await fetch(process.env.NEXT_PUBLIC_INVOICES_API_URL ? process.env.NEXT_PUBLIC_INVOICES_API_URL + `/${invoice?.id}` : '', {
-        //         method: 'PATCH',
-        //         body: JSON.stringify(values),
-        //         headers: {
-        //             "Content-Type": "application/json",
-        //             "Accept": "application/json"
-        //         }
-        //     })
-        //         .then(() => {
-        //             router.reload()
-        //         })
-        //         .catch(e => console.log(e))
-        // }
-        console.log(values);
+        if (formType === "create") {
+            await fetch(process.env.NEXT_PUBLIC_INVOICES_API_URL ? process.env.NEXT_PUBLIC_INVOICES_API_URL : '', {
+                method: 'POST',
+                body: JSON.stringify(values),
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                }
+            })
+                .then(() => {
+                    router.reload()
+                })
+                .catch(e => console.log(e))
+        } else {
+            await fetch(process.env.NEXT_PUBLIC_INVOICES_API_URL ? process.env.NEXT_PUBLIC_INVOICES_API_URL + `/${invoice?.id}` : '', {
+                method: 'PATCH',
+                body: JSON.stringify(values),
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                }
+            })
+                .then(() => {
+                    router.reload()
+                })
+                .catch(e => console.log(e))
+        }
+        // console.log(values);
         setSubmitting(false);
     }
 
