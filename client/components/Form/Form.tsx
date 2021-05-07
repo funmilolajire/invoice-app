@@ -6,6 +6,7 @@ import ItemList from './ItemList';
 import ButtonsDiv from './ButtonsDiv';
 import styles from './styles/Form.module.css';
 import { Formik, Form, FieldArray } from 'formik';
+import { Persist } from 'formik-persist'
 import { initialValues } from '../../utils/formFields';
 import { validationSchema } from '../../utils/formValidation';
 import { usePaymentState, useIssueState, useFormState } from '../../state/form.state';
@@ -42,7 +43,7 @@ const InvoiceForm: FC<FormType> = ({ formType, invoice }) => {
                 }
             })
                 .then(() => {
-                    router.replace(router.asPath)
+                    router.reload()
                     formState.close()
                 })
                 .catch(e => console.log(e))
@@ -90,6 +91,7 @@ const InvoiceForm: FC<FormType> = ({ formType, invoice }) => {
                                     }
                                 </div>
                                 <ButtonsDiv formType={formType} />
+                                {formType === 'create' && <Persist debounce={3600000} name="invoice-values" />}
                             </Form>
                         )}
                     </Formik>
