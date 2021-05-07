@@ -29,7 +29,7 @@ const Home: FC<Invoices> = ({ invoices }) => {
 
   useEffect(() => {
     getInvoices()
-  }, [status])
+  })
 
   return (
     <>

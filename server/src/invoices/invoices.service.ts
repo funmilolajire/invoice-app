@@ -15,7 +15,7 @@ export class InvoicesService {
   }
 
   async findAll() {
-    return await this.invoiceModel.find({}).exec()
+    return await this.invoiceModel.find({}).sort({ createdAt: -1 }).exec()
   }
 
   async findByTerm(term: string) {
