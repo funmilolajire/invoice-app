@@ -22,7 +22,8 @@ const HeaderCTA: FC<Status> = ({ status, id }) => {
             }
         })
             .then(() => {
-                router.reload()
+                router.replace(router.asPath)
+                setLoading(false)
             })
             .catch(e => console.error(e))
     }
