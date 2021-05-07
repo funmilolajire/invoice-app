@@ -1,10 +1,12 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-
+import { InvoicesModule } from './invoices/invoices.module';
+import { MongooseModule } from '@nestjs/mongoose'
+import { ConfigModule } from '@nestjs/config';
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [InvoicesModule,
+    ConfigModule.forRoot({ isGlobal: true, cache: true, envFilePath: [`./.env.development`, `./.env.production`] }),
+    MongooseModule.forRoot(process.env.DATABASE_URL,
+      { useNewUrlParser: true, useUnifiedTopology: true })]
 })
-export class AppModule {}
+export class AppModule {
+}

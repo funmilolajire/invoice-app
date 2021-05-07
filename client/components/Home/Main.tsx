@@ -1,12 +1,13 @@
+import { FC } from 'react';
 import Header from './Header';
 import InvoiceList from './InvoiceList';
 import NoInvoices from './NoInvoices';
 
-const Main = ({ invoices }) => {
-    const numInvoices = 7;
+const Main: FC<Invoices> = ({ invoices }) => {
+    const numInvoices = invoices.length;
     return (
         <>
-            <Header />
+            <Header numInvoices={numInvoices} />
             {numInvoices ? <InvoiceList invoices={invoices} /> : <NoInvoices />}
         </>
     )

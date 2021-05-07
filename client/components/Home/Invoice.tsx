@@ -1,20 +1,21 @@
+import { FC } from 'react';
 import Link from 'next/link';
 import { HiChevronRight } from 'react-icons/hi';
 import styles from './styles/Invoice.module.css';
 import { getStatusColors } from '../../utils/getStatusColors';
 
-const Invoice = () => {
-    const status = 'Pending'
+const Invoice: FC<Invoice> = ({ invoice }) => {
     let color: number[];
-    color = getStatusColors(status)
+    color = getStatusColors(invoice.status)
+    const status = invoice.status[0].toUpperCase() + invoice.status.substring(1);
 
     return (
-        <Link href='/invoice/[id]' as={`/invoice/${'XM9141'}`}>
+        <Link href={`/invoice/${invoice.id}`}>
             <section className={styles.container}>
-                <h2 className={styles.id}><span>#</span>XM9141</h2>
-                <p className={styles.dueDate}>Due 12 Oct 2021</p>
-                <p className={styles.name}>Alysa Werner</p>
-                <h2 className={styles.total}>£ 1102.04</h2>
+                <h2 className={styles.id}><span>#</span>{invoice.id}</h2>
+                <p className={styles.dueDate}>{invoice.paymentDue}</p>
+                <p className={styles.name}>{invoice.clientName}</p>
+                <h2 className={styles.total}>£ {invoice.total.toFixed(2)}</h2>
                 <div style={{ backgroundColor: `rgba(${color},0.06)` }} className={styles.status}>
                     <span style={{ backgroundColor: `rgb(${color})` }}></span>
                     <h3 style={{ color: `rgb(${color})` }} className={styles.label}>{status}</h3>

@@ -1,0 +1,15 @@
+.container {
+    margin-top: 2.4rem;
+}
+
+.biColumns{
+    display: flex;
+    -moz-column-gap: 2.4rem;
+         column-gap: 2.4rem;
+}
+
+@media all and (max-width:450px){
+    .biColumns{
+        flex-direction: column;
+    }
+}

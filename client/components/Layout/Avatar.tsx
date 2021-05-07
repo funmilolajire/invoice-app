@@ -1,7 +1,8 @@
+import { FC } from 'react';
 import Image from 'next/image';
 import styles from './styles/Avatar.module.css'
 
-const Avatar = () => {
+const Avatar: FC = () => {
     return (
         <picture className={styles.avatarDiv}>
             <Image

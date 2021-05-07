@@ -1,0 +1,136 @@
+.container{
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    background: var(--form-bg-color);
+    border-radius: 0px 20px 20px 0px;
+    width: 71.9rem;
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+    padding: 3.1rem 5.6rem 3.1rem 15.9rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.container .editButtons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.container .leftAlign {
+    margin-right: auto;
+}
+
+.container button {
+    border: none;
+    padding: 1.65rem 2.35rem;
+    border-radius: 2.4rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.25px;
+    cursor: pointer;
+}
+
+.discardButton {
+    color: #7E88C3;
+    background-color: #F9FAFE;
+}
+
+.discardButton:hover {
+    background-color: #DFE3FA;
+}
+
+.cancelButton {
+    color: #7E88C3;
+    background-color: var(--button-edit-bg-color);
+}
+
+.cancelButton:hover {
+    background-color: var(--button-edit-bg-color-hover);
+}
+
+.saveDraftButton{
+    color: #888EB0;
+    background: #373B53;
+}
+
+.saveDraftButton:hover{
+    background: #0C0E16;
+}
+
+.submitButton {
+    color: #FFFFFF;
+    background-color: #7C5DFA;
+}
+
+.submitButton:hover {
+    background-color: #9277FF;
+}
+
+@media all and (max-width:1000px) {
+    .container {
+        width: 61.6rem;
+        padding: 3.1rem 5.6rem 3.1rem 13.6rem;
+    }
+}
+
+@media all and (max-width:950px) {
+    .container {
+        padding-left: 5.6rem;
+    }
+}
+@media all and (max-width:620px){
+    .container{
+        width: 100vw;
+        border-radius: 0;
+        padding: 2.5rem 4.8rem;
+    }
+}
+
+@media all and (max-width:550px) {
+    .container {
+        padding: 2.1rem 2.4rem;
+        justify-content: space-between;
+    }
+    .container .editButtons {
+        width: 100%;
+        margin-right: auto;
+    }
+    .container .leftAlign{
+        margin: 0;
+    }
+}
+
+@media all and (max-width: 420px) {
+    .container button {
+    padding: 1.65rem 1.75rem;
+    }
+}
+
+@media all and (max-width: 380px) {
+    .container button{
+            padding: 1.45rem 1.55rem;
+    }
+}
+
+@media all and (max-width: 370px) {
+    .container button {
+        padding: 1.35rem 1.4rem;
+    }
+}
+
+@media all and (max-width: 357px) {
+    .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .container button,
+    .container .leftAlign {
+        width: 100%;
+    }
+}

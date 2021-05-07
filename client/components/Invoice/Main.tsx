@@ -1,11 +1,12 @@
+import { FC } from 'react';
 import Header from './Header';
 import Invoice from './Invoice';
 
-const Main = () => {
+const Main: FC<Invoice> = ({ invoice }) => {
     return (
         <>
-            <Header />
-            <Invoice />
+            <Header id={invoice.id || ''} status={invoice.status} />
+            <Invoice invoice={invoice} />
         </>
     )
 }

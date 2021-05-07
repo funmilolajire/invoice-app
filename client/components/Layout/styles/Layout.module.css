@@ -1,8 +1,9 @@
 .container {
   min-height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: flex-start;
-  background: #f2f2f2;
+  background: var(--main-bg-color);
 }
 
 .mainDiv {
@@ -13,4 +14,16 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+}
+
+@media all and (max-width:768px) {
+  .mainDiv {
+    padding: 0 4rem;
+  }
+}
+
+@media all and (max-width:550px) {
+  .mainDiv {
+    padding: 0 2.4rem;
+  }
 }

@@ -20,14 +20,19 @@
     margin-right: 1.6rem;
 }
 
-.selectFilter span {
+.selectFilter h3>span{
+    font-weight: bold;
+    color: var(--main-bold-text-color);
+}
+
+.selectFilter>span {
     color:#7C5DFA;
     font-size: 2rem;
 }
 
 .filterList{
     width: 19.2rem;
-    background: #FFFFFF;
+    background: var(--filterbox-bg-color);
     box-shadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
     border-radius: 8px;
     position: absolute;
@@ -35,8 +40,35 @@
     left: -3rem;
     margin-top: 6rem;
     padding: 2.4rem 0 2.4rem 2.4rem;
-    z-index: 10;
+    z-index: 5;
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
+}
+
+@media all and (max-width:620px) {
+    .selectFilter{
+        margin-top: 0.5rem;
+    }
+    .selectFilter h3{
+        margin-right: 1.2rem;
+    }
+    .container h3>span{
+        display: none;
+    }
+    .filterList {
+        left: -7rem;
+    }
+}
+
+@media all and (max-width: 550px) {
+    .container{
+        margin-right: 2rem;
+    }
+}
+
+@media all and (max-width: 350px) {
+    .container {
+        margin-right: 1rem;
+    }
 }

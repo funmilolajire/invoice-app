@@ -33,3 +33,17 @@
 .backDiv:hover .backLabel {
     color: #9277FF;
 }
+
+@media all and (max-width:950px) {
+    .container{
+        margin-top: 12.8rem;
+    }
+}
+
+@media all and (max-width:550px) {
+    .container{
+        margin-top: 10.2rem;
+        margin-bottom: 1.2rem;
+    }
+    
+}

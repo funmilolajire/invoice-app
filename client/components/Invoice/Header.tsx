@@ -1,9 +1,10 @@
+import { FC } from 'react';
 import Link from 'next/link';
 import HeaderCTA from './HeaderCTA';
 import { HiChevronLeft } from 'react-icons/hi';
 import styles from './styles/Header.module.css';
 
-const Header = () => {
+const Header: FC<Status> = ({ status, id }) => {
     return (
         <header className={styles.container}>
             <Link href='/'>
@@ -12,7 +13,7 @@ const Header = () => {
                     <h3 className={styles.backLabel}>Go back</h3>
                 </section>
             </Link>
-            <HeaderCTA />
+            <HeaderCTA id={id} status={status} />
         </header>
     )
 }

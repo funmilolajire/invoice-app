@@ -1,7 +1,8 @@
+import { FC } from 'react';
 import Aside from './Aside';
 import styles from './styles/Layout.module.css';
 
-const Layout = ({ children }) => {
+const Layout: FC = ({ children }) => {
     return (
         <div className={styles.container}>
             <Aside />

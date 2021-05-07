@@ -1,35 +1,43 @@
+import { FC, Fragment } from 'react';
 import styles from './styles/InvoiceItems.module.css';
 
-const InvoiceItems = () => {
+const InvoiceItems: FC<InvoiceItems> = ({ items, total }) => {
     return (
-        <div className={styles.container}>
-            <div className={styles.topDiv}>
-                <div className={styles.item}>
-                    <span className={styles.title}>Item Name</span>
-                    <span>Banner Design</span>
-                    <span>Email Design</span>
+        <>
+            {items &&
+                <div className={styles.container}>
+                    <div className={styles.topDiv}>
+                        <div className={styles.item}>
+                            <span className={styles.title}>Item Name</span>
+                            {items.map((item, index) => (
+                                <Fragment key={index}>
+                                    <span>{item.name}
+                                        <span className={styles.mobileShow} key={index}>{item.quantity} x £ {item.price.toFixed(2)}</span>
+                                    </span>
+                                </Fragment>
+                            )
+                            )}
+                        </div>
+                        <div className={styles.qty}>
+                            <span className={styles.title}>QTY.</span>
+                            {items.map((item, index) => <span key={index}>{item.quantity}</span>)}
+                        </div>
+                        <div className={styles.price}>
+                            <span className={styles.title}>Price</span>
+                            {items.map((item, index) => <span key={index}>£ {item.price.toFixed(2)}</span>)}
+                        </div>
+                        <div className={styles.total}>
+                            <span className={styles.title}>Total</span>
+                            {items.map((item, index) => <span className={styles.itemTotal} key={index}>£ {item.total.toFixed(2)}</span>)}
+                        </div>
+                    </div>
+                    <div className={styles.bottomDiv}>
+                        <span>Amount Due</span>
+                        <h3>£ {total.toFixed(2)}</h3>
+                    </div>
                 </div>
-                <div className={styles.qty}>
-                    <span className={styles.title}>QTY.</span>
-                    <span>1</span>
-                    <span>2</span>
-                </div>
-                <div className={styles.price}>
-                    <span className={styles.title}>Price</span>
-                    <span>£ 156.00</span>
-                    <span>£ 200.00</span>
-                </div>
-                <div className={styles.total}>
-                    <span className={styles.title}>Total</span>
-                    <span>£ 156.00</span>
-                    <span>£ 400.00</span>
-                </div>
-            </div>
-            <div className={styles.bottomDiv}>
-                <span>Amount Due</span>
-                <h3>£ 556.00</h3>
-            </div>
-        </div>
+            }
+        </>
     )
 }
 

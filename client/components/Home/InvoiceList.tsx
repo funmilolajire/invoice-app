@@ -1,21 +1,11 @@
+import { FC } from 'react';
 import Invoice from './Invoice';
 import styles from './styles/InvoiceList.module.css';
 
-const InvoiceList = ({ invoices }) => {
-    // console.log(invoices)
-
+const InvoiceList: FC<Invoices> = ({ invoices }) => {
     return (
         <div className={styles.container}>
-            <Invoice />
-            <Invoice />
-            <Invoice />
-            <Invoice />
-            <Invoice />
-            <Invoice />
-            <Invoice />
-            <Invoice />
-            <Invoice />
-            <Invoice />
+            {invoices.map(invoice => <Invoice key={invoice.id} invoice={invoice} />)}
         </div>
     )
 }

@@ -1,8 +1,25 @@
 .container{
     width: 100%;
-    background: #FFFFFF;
+    background: var(--box-bg-color);
     box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
     border-radius: 8px;
     padding: 4.8rem;
     margin-bottom: 6.7rem;
+}
+
+@media all and (max-width:768px) {
+    .container {
+        padding: 3.2rem;
+    }
+}
+@media all and (max-width:700px) {
+    .container {
+        padding: 2.4rem;
+    }
+}
+
+@media all and (max-width:600px) {
+    .container{
+        margin-bottom: 15rem;
+    }
 }
