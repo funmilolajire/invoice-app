@@ -19,7 +19,8 @@ export class InvoicesService {
   }
 
   async findByTerm(term: string) {
-    let found = await this.invoiceModel.findById(term.toUpperCase()).exec() || await this.invoiceModel.find({ status: term.toLowerCase() });
+    let found = await this.invoiceModel.findById(term.toUpperCase()).sort({ created_at: -1 }).exec()
+      || await this.invoiceModel.find({ status: term.toLowerCase() }).sort({ created_at: -1 });
     if (!found) {
       throw new NotFoundException('Invoice not found');
     } else {
