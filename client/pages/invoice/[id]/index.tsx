@@ -3,9 +3,9 @@ import Main from '../../../components/Invoice/Main';
 import EditInvoice from '../../../components/Form/EditInvoice';
 import DeletePopup from '../../../components/Invoice/DeletePopup';
 import { useRouter } from 'next/router';
-import { GetStaticPaths, GetStaticProps, GetServerSideProps } from 'next';
+import { GetServerSideProps } from 'next';
 import { useFormState } from '../../../state/form.state';
-import { FC, useState, useEffect } from 'react';
+import { FC } from 'react';
 import dayjs from 'dayjs';
 
 const Invoice: FC<Invoice> = ({ invoice }) => {
@@ -36,16 +36,5 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         }
     }
 }
-
-// export const getStaticPaths: GetStaticPaths = async () => {
-//     const res = await fetch(process.env.INVOICES_API_URL ? process.env.INVOICES_API_URL : '')
-//     const invoices = await res.json()
-//     const ids = invoices.map((invoice: FormValues) => invoice._id)
-//     const paths = ids.map((id: string) => ({ params: { id: id } }))
-//     return {
-//         paths,
-//         fallback: false
-//     }
-// }
 
 export default Invoice

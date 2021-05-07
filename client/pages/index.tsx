@@ -1,5 +1,4 @@
 import { FC, useEffect, useState } from 'react';
-import { GetServerSideProps, GetStaticProps } from 'next';
 import Meta from '../components/Layout/Meta';
 import Main from '../components/Home/Main';
 import NewInvoice from '../components/Form/NewInvoice';
@@ -39,24 +38,5 @@ const Home: FC<Invoices> = ({ invoices }) => {
     </>
   )
 }
-
-// export const getStaticProps: GetStaticProps = async () => {
-//   const res = await fetch(process.env.INVOICES_API_URL ? process.env.INVOICES_API_URL + '/' : '');
-//   let invoices: FormValues[] = await res.json();
-//   invoices = invoices.map((invoice: FormValues) => (
-//     {
-//       ...invoice,
-//       id: invoice._id,
-//       createdAt: dayjs(invoice.createdAt).format('DD MMM YYYY'),
-//       paymentDue: dayjs(invoice.paymentDue).format('DD MMM YYYY')
-//     }
-//   ))
-
-//   return {
-//     props: {
-//       invoices
-//     }
-//   }
-// }
 
 export default Home
