@@ -9,6 +9,7 @@
     "client:build": "npm run build --prefix client",
     "client:start": "npm run start --prefix client",
     "server:dev": "npm run start:dev --prefix server",
+    "server:prod": "npm run start:prod --prefix server",
     "server:build": "npm run build --prefix server",
     "dev": "concurrently \"npm run client:dev\" \"npm run server:dev\""
   },
