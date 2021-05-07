@@ -7,7 +7,7 @@ BUILD_DIR=${1:-}
 CACHE_DIR=${2:-}
 ENV_DIR=${3:-}
 
-PROJECT_PATH=src
+PROJECT_PATH=server
 
 echo "-----> My Subdir buildpack: path is $PROJECT_PATH"
 echo "       creating cache: $CACHE_DIR"
