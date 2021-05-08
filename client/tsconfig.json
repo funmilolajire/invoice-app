@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "next.config.js", "pages/_document.js"  ],
+, "next.config.js", "pages/_document.js", "components/Form/FormikPersist.tsx"  ],
   "exclude": [
     "node_modules"
   ]

@@ -3,6 +3,13 @@ interface FormType {
     invoice?: FormValues;
 }
 
+interface ButtonsType {
+    formType: string;
+    invoice?: FormValues;
+    values: FormValues;
+    setSubmitting: any;
+}
+
 interface TermValue {
     paymentTerm?: number
 }

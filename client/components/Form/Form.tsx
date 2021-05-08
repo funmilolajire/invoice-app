@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useRef } from 'react';
 import BillFrom from './BillFrom';
 import BillTo from './BillTo';
 import ProjectDetails from './ProjectDetails';
@@ -6,7 +6,7 @@ import ItemList from './ItemList';
 import ButtonsDiv from './ButtonsDiv';
 import styles from './styles/Form.module.css';
 import { Formik, Form, FieldArray } from 'formik';
-import { Persist } from 'formik-persist'
+import FormikPersist from './FormikPersist'
 import { initialValues } from '../../utils/formFields';
 import { validationSchema } from '../../utils/formValidation';
 import { usePaymentState, useIssueState, useFormState } from '../../state/form.state';
@@ -22,8 +22,7 @@ const InvoiceForm: FC<FormType> = ({ formType, invoice }) => {
     const issueDate = useIssueState()
     const router = useRouter()
     const onSubmit = async (values: FormValues, { setSubmitting }: { setSubmitting: any }) => {
-        const buttonName = document.activeElement?.getAttribute('name')
-        let status = buttonName?.toLowerCase() === 'draft' ? "draft" : "pending";
+        let status = "pending";
         values._id = invoice?._id ? invoice._id : getId();
         values.paymentTerms = paymentTerm.get();
         values.createdAt = issueDate.get();
@@ -43,6 +42,7 @@ const InvoiceForm: FC<FormType> = ({ formType, invoice }) => {
                 }
             })
                 .then(() => {
+                    window.localStorage.setItem('form-values', JSON.stringify(initialValues));
                     router.reload()
                     formState.close()
                 })
@@ -66,20 +66,27 @@ const InvoiceForm: FC<FormType> = ({ formType, invoice }) => {
         setSubmitting(false);
     }
 
+    const formOuterRef = useRef<HTMLDivElement>(null)
+    const closeForm = ({ target }: { target: any }) => {
+        if (formOuterRef.current === target) {
+            formState.close()
+        }
+    }
+
     return (
         <div>
-            <div className={styles.container}>
+            <div ref={formOuterRef} onClick={closeForm} className={styles.container}>
                 <section>
                     {formType === "create" ? <h2 className={styles.heading}>New Invoice</h2> : <h2 className={styles.heading}>Edit <span>#</span>{invoice?.id}</h2>}
                     <Formik initialValues={invoice || initialValues} validationSchema={validationSchema} onSubmit={onSubmit} >
-                        {({ values, errors, setFieldValue, handleChange }) => (
+                        {({ values, errors, setFieldValue, setSubmitting, handleChange }) => (
                             <Form>
                                 <BillFrom />
                                 <BillTo />
                                 <ProjectDetails paymentTerm={invoice?.paymentTerms} />
                                 <FieldArray name="items">
                                     {({ remove, push }) => (
-                                        <ItemList items={values.items} handleChange={handleChange} setFieldValue={setFieldValue} push={push} remove={remove} />
+                                        values.items && <ItemList items={values.items} handleChange={handleChange} setFieldValue={setFieldValue} push={push} remove={remove} />
                                     )}
                                 </FieldArray>
                                 <div className={styles.errorsDiv}>
@@ -90,8 +97,8 @@ const InvoiceForm: FC<FormType> = ({ formType, invoice }) => {
                                         <p className={styles.itemsError}>- An item must be added</p> : ''
                                     }
                                 </div>
-                                <ButtonsDiv formType={formType} />
-                                {formType === 'create' && <Persist debounce={3600000} name="invoice-values" />}
+                                <ButtonsDiv setSubmitting={setSubmitting} values={values} formType={formType} />
+                                {formType === 'create' && <FormikPersist name="form-values" />}
                             </Form>
                         )}
                     </Formik>
