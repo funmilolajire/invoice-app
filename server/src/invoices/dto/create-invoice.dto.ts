@@ -1,3 +1,5 @@
+import { ApiProperty } from "@nestjs/swagger";
+
 export class CreateInvoiceDto {
     id?: string;
     status: string;
@@ -19,6 +21,7 @@ export class CreateInvoiceDto {
     paymentDue: string;
     paymentTerms: number;
     description: string;
+    @ApiProperty({ isArray: true, default: [] })
     items: {
         name: string,
         quantity: number,
