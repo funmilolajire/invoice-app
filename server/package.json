@@ -27,6 +27,7 @@
     "@nestjs/mapped-types": "^0.4.1",
     "@nestjs/mongoose": "^7.2.4",
     "@nestjs/platform-express": "^7.6.15",
+    "@nestjs/swagger": "^4.8.0",
     "dotenv": "^8.2.0",
     "flatted": "^3.1.1",
     "helmet": "^4.5.0",
@@ -35,7 +36,8 @@
     "mongoose": "^5.12.5",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rxjs": "^6.6.6"
+    "rxjs": "^6.6.6",
+    "swagger-ui-express": "^4.1.6"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.6.0",
