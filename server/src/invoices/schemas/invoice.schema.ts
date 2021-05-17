@@ -45,7 +45,7 @@ export class Invoice {
     @Prop()
     description: string;
 
-    @Prop({ type: [Object] })
+    @Prop({ type: Array<Object>() })
     items: {
         name: string,
         quantity: number,

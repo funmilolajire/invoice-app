@@ -21,7 +21,7 @@ export class CreateInvoiceDto {
     paymentDue: string;
     paymentTerms: number;
     description: string;
-    @ApiProperty({ isArray: true, default: [] })
+    @ApiProperty({ isArray: true, default: [], type: Array<Object>() })
     items: {
         name: string,
         quantity: number,
